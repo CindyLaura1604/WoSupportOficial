@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast Player</title>
+    <link rel="stylesheet" href="podcast.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        WoSupport
+    </header>
+
+    <main class="main-content">
+        <div class="card podcast-card">
+            <h2 class="podcast-title">Podcast 1</h2>
+
+            <div class="podcast-info">
+                <i class="fas fa-dot-circle podcast-dot"></i>
+                <p class="podcast-description">Conheça a história do WoSupport</p>
+            </div>
+            <p class="podcast-sub-description">Descrição</p>
+
+            <div class="image-placeholder">
+                <i class="fa-solid fa-image"></i>
+            </div>
+
+            <div class="audio-controls">
+                <button class="control-button backward-button" data-action="backward">
+                    <i class="fas fa-backward-step"></i>
+                </button>
+
+                <audio id="podcastAudio" controls class="hidden-audio-player">
+                    <source src="caminho/para/seu/audio.mp3" type="audio/mpeg">
+                    Seu navegador não suporta o elemento de áudio.
+                </audio>
+
+                <button class="control-button play-pause-button" data-action="play-pause">
+                    <i class="fas fa-play"></i>
+                    </button>
+                <button class="control-button forward-button" data-action="forward">
+                    <i class="fas fa-forward-step"></i>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        WoSupport
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const audio = document.getElementById('podcastAudio');
+            const playPauseBtn = document.querySelector('.play-pause-button');
+            const playPauseIcon = playPauseBtn.querySelector('i');
+            const forwardBtn = document.querySelector('.forward-button');
+            const backwardBtn = document.querySelector('.backward-button'); 
+            playPauseBtn.addEventListener('click', () => {
+                if (audio.paused) {
+                    audio.play();
+                    playPauseIcon.classList.remove('fa-play');
+                    playPauseIcon.classList.add('fa-pause');
+                } else {
+                    audio.pause();
+                    playPauseIcon.classList.remove('fa-pause');
+                    playPauseIcon.classList.add('fa-play');
+                }
+            });
+
+            forwardBtn.addEventListener('click', () => {
+                audio.currentTime += 10; 
+            });
+
+            backwardBtn.addEventListener('click', () => {
+                audio.currentTime -= 10; 
+            });
+
+            audio.addEventListener('ended', () => {
+                playPauseIcon.classList.remove('fa-pause');
+                playPauseIcon.classList.add('fa-play');
+            });
+        });
+    </script>
+</body>
+</html>
