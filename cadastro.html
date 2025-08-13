@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro.css">
+   
+    <title>WoSupport</title>
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+   
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="top-bar">
+        WoSupport
+    </header>
+   
+    <div class="form-wrapper">
+        <form action="">
+            <label for="nome">Nome completo:</label><br>
+            <input type="text"
+                   id="nome"
+                   name="nome"
+                   placeholder="Digite seu nome completo"
+                   required><br><br>
+
+
+            <label for="email">E-mail:</label><br>
+            <input type="email"
+                   id="email"
+                   name="email" placeholder="Digite seu e-mail"><br><br>
+
+
+            <label for="senha">Senha:</label><br>
+            <input type="password"
+                   id="senha"
+                   name="senha"
+                   placeholder="Digite uma senha"><br><br>
+
+
+            <label for="confirmar-senha"> Confirme a senha:</label><br>
+            <input type="password"
+                   id="confirmar-senha" name="confirmar-senha" placeholder="Confirme sua senha: "><br><br><input type="submit" value="Cadastrar" onclick="window.location.href='telaprincipal.html'">
+        </form>
+    </div> <footer class="bottom-bar">
+        WoSupport
+    </footer>
+</body>
+</html>
