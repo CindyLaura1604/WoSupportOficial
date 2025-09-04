@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="cadastroempresa.css">
+    <link rel="stylesheet" href="./css/styles.css">   
    
     <title>WoSupport - Cadastro de Empresa</title>
    
@@ -17,42 +17,33 @@
     </header>
    
     <div class="form-card-wrapper">
-        <form action="">
+        <form action="cadastrarempresa" method="POST">
             <div class="form-group">
-                <label for="nome-empresa">Nome da empresa:</label>
+                <label for="nomeempresa">Nome da empresa:</label>
                 <input type="text"
-                       id="nome-empresa"
-                       name="nome-empresa"
+                       id="nomeempresa"
+                       name="nomeempresa"
                        placeholder="Value" required>
             </div>
 
 
             <div class="form-group">
-                <label for="email-empresa">E-mail:</label>
-                <input type="email"
-                       id="email-empresa"
-                       name="email-empresa"
-                       placeholder="Value" required>
-            </div>
-
-
-            <div class="form-group">
-                <label for="cnpj-empresa">CNPJ:</label>
+                <label for="cnpjempresa">CNPJ:</label>
                 <input type="text"
-                       id="cnpj-empresa"
-                       name="cnpj-empresa"
+                       id="cnpjempresa"
+                       name="cnpjempresa"
                        placeholder="Value" required>
             </div>
            
             <div class="form-group">
-                <label for="descricao-empresa">Descrição:</label>
-                <textarea id="descricao-empresa"
-                          name="descricao-empresa"
+                <label for="descricaoempresa">Descrição:</label>
+                <textarea id="descricaoempresa"
+                          name="descricaoempresa"
                           rows="4" placeholder="Value" required></textarea>
             </div>
 
 
-            <button type="submit" class="btn-avancar" onclick="window.location.href='telaprincipal.html'">Avançar</button>
+            <button type="submit" class="btn-avancar" onclick="window.location.href='telaempresa.html'">Avançar</button>
         </form>
     </div> <footer class="bottom-bar">
         WoSupport
